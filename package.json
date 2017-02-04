@@ -1,0 +1,19 @@
+{
+  "name": "oldjoebongs",
+  "version": "0.0.0",
+  "description": "BONG",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmackenzie/oldjoebongs.git"
+  },
+  "author": "Alexander Mackenzie",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/alexmackenzie/oldjoebongs/issues"
+  },
+  "homepage": "https://github.com/alexmackenzie/oldjoebongs#readme"
+}
