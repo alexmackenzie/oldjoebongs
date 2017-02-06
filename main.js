@@ -32,11 +32,13 @@ var runBong = function() {
 	if (hour == 0)
 		hour = 12;
 
-	// Bong text.
-	var text = getBong(hour).trim();
-	text = "[" + dateformat(now, "dd/mm HHtt") + "]" + text;
+	// Construct the tweet.
+	var text = "[" + dateformat(now, "dd/mm HH:00") + "]";
+	text += " ";
+	text += getBong(hour);
 	text += "\uD83D\uDD14";
 
+	// Send tweet to twitter.
 	client.post("statuses/update", {
 		// Text of the tweet.
 		status: text,
