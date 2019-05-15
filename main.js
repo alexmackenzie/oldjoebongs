@@ -2,7 +2,6 @@
 var auth = require("./auth.js");
 
 // Load other required modules.
-var time = require("time")(Date);
 var dateformat = require("dateformat");
 var scheduler = require("node-schedule");
 var twitter = require("twitter");
@@ -59,3 +58,5 @@ var runBong = function() {
 
 // Schedule the runBong function to run every hour.
 var job = scheduler.scheduleJob("0 * * * *", runBong);
+
+console.log("Startup done, next tweet scheduled.");

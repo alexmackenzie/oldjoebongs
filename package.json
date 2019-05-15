@@ -18,7 +18,6 @@
   "homepage": "https://github.com/alexmackenzie/oldjoebongs#readme",
   "dependencies": {
     "node-schedule": "^1.2.0",
-    "time": "^0.11.4",
     "twitter": "^1.7.0",
     "dateformat": "~2.0.0"
   }
