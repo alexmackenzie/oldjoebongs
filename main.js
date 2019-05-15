@@ -2,7 +2,7 @@
 var auth = require("./auth.js");
 
 // Load other required modules.
-var dateformat = require("dateformat");
+var luxon = require("luxon");
 var scheduler = require("node-schedule");
 var twitter = require("twitter");
 var client = twitter(auth);
@@ -22,17 +22,15 @@ var getBong = function(hour) {
 };
 
 var runBong = function() {
-	var now = new Date();
-	now.setTimezone("Europe/London");
-
-	var hour = now.getHours() % 12;
+	var now = luxon.DateTime.local().setZone("Europe/London");
+	var hour = (now.c.hour) % 12;
 
 	// Hour 0 is hour 12.
 	if (hour == 0)
 		hour = 12;
 
 	// Construct the tweet.
-	var text = "[" + dateformat(now, "dd/mm HH:00") + "]";
+	var text = "[" + now.toFormat("dd/MM HH:00") + "]";
 	text += " ";
 	text += getBong(hour);
 	text += "\uD83D\uDD14";

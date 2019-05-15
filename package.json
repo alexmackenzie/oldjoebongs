@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/alexmackenzie/oldjoebongs#readme",
   "dependencies": {
+    "luxon": "^1.13.2",
     "node-schedule": "^1.2.0",
-    "twitter": "^1.7.0",
-    "dateformat": "~2.0.0"
+    "twitter": "^1.7.0"
   }
 }
